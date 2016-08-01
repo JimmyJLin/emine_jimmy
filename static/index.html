@@ -1,0 +1,35 @@
+<html ng-app="naBaseApp">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type='text/javascript' src="js/angular.min.js"></script>
+  <script type='text/javascript' src="js/angular-route.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<a href ng-href="#/">Home</a> |
+		        <a href ng-href="#/data/profiles">Profiles</a>
+		    </div>
+		</div>
+
+    	<div id="content" ng-view></div>
+		
+	</div>
+
+	<!-- controllers -->
+    <script type='text/javascript' src="app/app.js"></script>
+	<script type='text/javascript' src="app/controllers/home/homecontroller.js"></script>
+	<script type='text/javascript' src="app/controllers/data/dataprofilecontroller.js"></script>
+	<script type='text/javascript' src="app/controllers/data/dataprofiledetailcontroller.js"></script>
+
+	<!-- providers -->
+	<script type='text/javascript' src="app/services/home/homeProvider.js"></script>
+	<script type='text/javascript' src="app/services/data/dataprofileprovider.js"></script>
+
+</body>
+</html>
+
+
