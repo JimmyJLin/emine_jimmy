@@ -35,6 +35,8 @@ naBaseApp.config(function ($routeProvider) {
 				  templateUrl: "/app/views/public/home/index.html"
 			  }
 		)
+		
+		// public/dealer area
 		.when("/public/dealer/dealerSignup",
 		      {
 				  //redirectTo: "/public/index"
@@ -48,10 +50,35 @@ naBaseApp.config(function ($routeProvider) {
 				  templateUrl: "/app/views/public/dealer/dealerSignin.html"
 		      }
 	    )
+		
+		// public/vehicle
+		.when("/public/vehicle/vehicleListing", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/vehicle/vehicleListing.html"
+			}
+		)
+		.when("/public/vehicle/advancedSearch", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/vehicle/advancedSearch.html"
+		})
+		.when("/public/vehicle/vehicleDetail", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/vehicle/vehicleDetail.html"
+		})
+		.when("/public/vehicle/basicSearch", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/vehicle/basicSearch.html"
+		})
+		.when("/public/vehicle/searchResults", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/vehicle/searchResults.html"
+		})
+		
+		// public/test 
 		.when("/public/test",
 		      {
 				  controller: "PublicController",
-				  templateUrl: "/app/views/public/dealer/dealerSignin.html"
+				  templateUrl: "/app/views/public/vehicle/vehicleListing.html"
 		      }
 	    )
         .when( "/",  
