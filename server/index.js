@@ -39,6 +39,7 @@ var profiles = [ { profile_id: "mark_01",
                ];
 
 
+// need to migrate routes out. This is messy
 app.get("/v1/profiles.json", function (req, res){
 	return send_success_resp(res, profiles);
 });
@@ -49,6 +50,12 @@ app.get("/v1/profiles/:profile_id.json", function(req,res){
 			return send_success_resp(res, profiles[i]);
 		}
 	}
+});
+
+// vehicle
+app.get("/v1/vehicles.json", function(req, res){
+	console.log("DEBUG => app.get > " + vehicles);
+	return send_success_resp(res, vehicles);
 });
 
 console.error("Starting Server ont port => " + _port);

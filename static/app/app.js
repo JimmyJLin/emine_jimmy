@@ -20,6 +20,13 @@ naBaseApp.config(function ($routeProvider) {
 				   templateUrl: "/app/partials/data/profileDetail.html"
 			   }
 		)
+		// route for vehicles
+		.when( "/data/vehicles/",
+			   {
+				   controller: "DataVehicleController",
+				   templateUrl: "/app/partials/data/vehicles.html"
+			   }
+		)
         .when( "/",  
 		       { 
 			     redirectTo: "/home" 
