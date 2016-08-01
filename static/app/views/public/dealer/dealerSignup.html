@@ -1,9 +1,12 @@
-<header class="public-site-header">
+<div id="panel">
+        <div id="stage">
+
+			<header class="public-site-header">
                 <div class="row">
                     <div class="small-7 medium-4 columns">
                         <div class="public-site-header-logo">
                             <a href="/">
-                                <img src="/assets/images/na-logo-white-red.png" alt="Logo">
+                                <img src="/img/na-logo-white-red.png" alt="Logo">
                             </a>
                         </div>
                     </div>
@@ -21,7 +24,7 @@
             <div class="centered-auction-icon">
                 <div class="row">
                     <div class="small-12 columns">
-                        <img src="/assets/images/auction-icon-red.png">
+                        <img src="/img/auction-icon-red.png">
                     </div>
                 </div>
             </div>
@@ -43,9 +46,7 @@
                             <div class="container">
                                 <h3>Primary Dealership</h3>
 
-                                <div class="progress">
-                                    <div class="progress-bar" id="progress1" data-perc="30"></div>
-                                </div>
+
 
                                 <ul class="steps">
                                     <li><a href="#" id="radioLinkInfo" class="current"><i class="fa fa-check-circle" id="circleDealer" aria-hidden="true"></i> Dealer Information</a></li>
@@ -53,7 +54,7 @@
                                     <li><a href="#" id="radioLinkFiles"><i class="fa fa-circle-o" id="circleFiles" aria-hidden="true"></i> File Upload</a></li>
                                 </ul>
 
-                                <a href="#" class="na-red-button full-width-button centered-text">Add Locations</a>
+                                <a href="#" class="na-red-button  centered-text">Add Locations</a>
                             </div>
                         </div>
                     </div>
@@ -181,7 +182,8 @@
 
                                     <div class="small-12 medium-6 columns">
                                         <select class="na-select" id="ddlLotUSState" required>
-                                            @Html.Partial("/Views/Shared/data/_DataUSStates.cshtml")
+                                            <option value="0">AZ</option>
+											<option value="1">KS</option>
                                         </select>
                                     </div>
                                 </div>
@@ -218,7 +220,8 @@
 
                                     <div class="small-12 medium-6 columns">
                                         <select class="na-select" id="ddlUSState" required>
-                                            @Html.Partial("/Views/Shared/data/_DataUSStates.cshtml")
+                                            <option value="0">AZ</option>
+											<option value="1">KS</option>
                                         </select>
                                     </div>
                                 </div>
@@ -320,7 +323,8 @@
 
                                     <div class="small-12 medium-6 columns">
                                         <select class="na-select" id="ddlBankUSState" required>
-                                            @Html.Partial("/Views/Shared/data/_DataUSStates.cshtml")
+                                            <option value="0">AZ</option>
+											<option value="1">KS</option>
                                         </select>
                                     </div>
                                 </div>
@@ -428,3 +432,5 @@
 
         <div ng-include src="'app/views/public/shared/footer.html'"></div>
     </div>
+</div>
+</div>

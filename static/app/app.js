@@ -1,6 +1,7 @@
 var naBaseApp = angular.module("naBaseApp", [ "ngRoute" ]);
 
 naBaseApp.config(function ($routeProvider) {
+	
     $routeProvider
 		.when( "/home",
 			   {
@@ -29,12 +30,14 @@ naBaseApp.config(function ($routeProvider) {
 		)
 		.when("/public/index",
 			  {
+				  //redirectTo: "/home"
 				  controller: "PublicController",
 				  templateUrl: "/app/views/public/home/index.html"
 			  }
 		)
 		.when("/public/dealer/dealerSignup",
 		      {
+				  //redirectTo: "/public/index"
 				  controller: "PublicController",
 				  templateUrl: "/app/views/public/dealer/dealerSignup.html"
 		      }
