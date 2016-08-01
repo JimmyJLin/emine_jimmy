@@ -28,6 +28,8 @@ naBaseApp.config(function ($routeProvider) {
 				   templateUrl: "/app/partials/data/vehicles.html"
 			   }
 		)
+		
+		// public/home
 		.when("/public/index",
 			  {
 				  //redirectTo: "/home"
@@ -35,6 +37,18 @@ naBaseApp.config(function ($routeProvider) {
 				  templateUrl: "/app/views/public/home/index.html"
 			  }
 		)
+		.when("/public/about/contact",{
+			controller: "PublicController",
+			templateUrl: "/app/views/public/home/aboutContact.html"
+		})
+		.when("/public/about/faqs", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/home/aboutFAQs.html"
+		})
+		.when("/public/about/whoweare", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/home/aboutWhoWeAre.html"
+		})
 		
 		// public/dealer area
 		.when("/public/dealer/dealerSignup",
