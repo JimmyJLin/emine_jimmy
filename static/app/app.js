@@ -42,6 +42,18 @@ naBaseApp.config(function ($routeProvider) {
 				  templateUrl: "/app/views/public/dealer/dealerSignup.html"
 		      }
 		)
+		.when("/public/dealer/dealerSignin",
+		      {
+				  controller: "PublicController",
+				  templateUrl: "/app/views/public/dealer/dealerSignin.html"
+		      }
+	    )
+		.when("/public/test",
+		      {
+				  controller: "PublicController",
+				  templateUrl: "/app/views/public/dealer/dealerSignin.html"
+		      }
+	    )
         .when( "/",  
 		       { 
 			     redirectTo: "/home" 
