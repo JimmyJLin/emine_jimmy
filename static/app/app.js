@@ -21,6 +21,7 @@ naBaseApp.config(function ($routeProvider) {
 				   templateUrl: "/app/partials/data/profileDetail.html"
 			   }
 		)
+		
 		// route for vehicles
 		.when( "/data/vehicles",
 			   {
@@ -64,6 +65,35 @@ naBaseApp.config(function ($routeProvider) {
 				  templateUrl: "/app/views/public/dealer/dealerSignin.html"
 		      }
 	    )
+		.when("/public/dealer/addVehiclesByVIN", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/dealer/addVehiclesByVIN"
+		})
+		.when("/public/dealer/createPassword",{
+			controller: "PublicController",
+			templateUrl: "/app/views/public/dealer/createPassword.html"
+		})
+		.when("/public/dealer/dealerDetail", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/dealer/dealerDetail.html"
+		})
+		.when("/public/dealer/profileLanding", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/dealer/profileLanding"
+		})
+		.when("/public/dealer/dealerSearch", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/dealer/dealerSearch"
+		})
+		.when("/public/dealer/vehicleListing",{
+			controller: "PublicController",
+			templateUrl: "/app/views/public/dealer/vehicleListing.html"
+		})
+		.when("/public/dealer/dealerSearchResults",{
+			controller: "PublicController",
+			templateUrl: "/app/views/public/dealer/dealerSearchResults"
+		})
+		
 		
 		// public/tools
 		.when("/public/tools/vinDecoder", {
