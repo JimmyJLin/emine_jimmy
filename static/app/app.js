@@ -76,7 +76,7 @@ naBaseApp.config(function ($routeProvider) {
 		})
 		.when("/public/dealer/vehicleListing",{
 			controller: "PublicController",
-			templateUrl: "/app/views/public/dealer/vehicleListing.html"
+			templateUrl: "/app/views/public/vehicle/vehicleListing.html"
 		})
 		.when("/public/dealer/dealerSearchResults",{
 			controller: "PublicController",
@@ -114,20 +114,17 @@ naBaseApp.config(function ($routeProvider) {
 		})
 		
 		// public/test 
-		.when("/public/test",
-		      {
-				  controller: "PublicController",
-				  templateUrl: "/app/views/public/vehicle/vehicleListing.html"
-		      }
-	    )
-        .when( "/",  
-		       { 
-			     redirectTo: "/home" 
-			   }
-		)
-        .otherwise( { 
-			          redirectTo: 
-					  "/404_page" 
-				    }
-	    );
+		.when("/public/test",{
+			controller: "PublicController",
+			templateUrl: "/app/views/public/vehicle/vehicleListing.html"
+		})
+        .when( "/",{ 
+			redirectTo: "/home" 
+		})
+		
+		// end
+        .otherwise({
+			redirectTo: 
+			"/404_page" 
+		});
 });
