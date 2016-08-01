@@ -21,11 +21,23 @@ naBaseApp.config(function ($routeProvider) {
 			   }
 		)
 		// route for vehicles
-		.when( "/data/vehicles/",
+		.when( "/data/vehicles",
 			   {
 				   controller: "DataVehicleController",
 				   templateUrl: "/app/partials/data/vehicles.html"
 			   }
+		)
+		.when("/public/index",
+			  {
+				  controller: "PublicController",
+				  templateUrl: "/app/views/public/home/index.html"
+			  }
+		)
+		.when("/public/dealer/dealerSignup",
+		      {
+				  controller: "PublicController",
+				  templateUrl: "/app/views/public/dealer/dealerSignup.html"
+		      }
 		)
         .when( "/",  
 		       { 
