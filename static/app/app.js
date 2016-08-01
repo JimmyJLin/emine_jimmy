@@ -51,6 +51,12 @@ naBaseApp.config(function ($routeProvider) {
 		      }
 	    )
 		
+		// public/tools
+		.when("/public/tools/vinDecoder", {
+			controller: "PublicController",
+			templateUrl: "/app/views/public/tools/vinDecoder.html"
+		})
+		
 		// public/vehicle
 		.when("/public/vehicle/vehicleListing", {
 			controller: "PublicController",
