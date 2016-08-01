@@ -45,22 +45,18 @@ naBaseApp.config(function ($routeProvider) {
 		})
 		
 		// public/dealer area
-		.when("/public/dealer/dealerSignup",
-		      {
-				  //redirectTo: "/public/index"
-				  controller: "PublicController",
-				  templateUrl: "/app/views/public/dealer/dealerSignup.html"
-		      }
-		)
-		.when("/public/dealer/dealerSignin",
-		      {
-				  controller: "PublicController",
-				  templateUrl: "/app/views/public/dealer/dealerSignin.html"
-		      }
-	    )
+		.when("/public/dealer/dealerSignup",{
+			//redirectTo: "/public/index"
+			controller: "PublicController",
+			templateUrl: "/app/views/public/dealer/dealerSignup.html"
+		})
+		.when("/public/dealer/dealerSignin",{
+			controller: "PublicController",
+			templateUrl: "/app/views/public/dealer/dealerSignin.html"
+		})
 		.when("/public/dealer/addVehiclesByVIN", {
 			controller: "PublicController",
-			templateUrl: "/app/views/public/dealer/addVehiclesByVIN"
+			templateUrl: "/app/views/public/dealer/addVehiclesByVIN.html"
 		})
 		.when("/public/dealer/createPassword",{
 			controller: "PublicController",
@@ -72,11 +68,11 @@ naBaseApp.config(function ($routeProvider) {
 		})
 		.when("/public/dealer/profileLanding", {
 			controller: "PublicController",
-			templateUrl: "/app/views/public/dealer/profileLanding"
+			templateUrl: "/app/views/public/dealer/profileLanding.html"
 		})
 		.when("/public/dealer/dealerSearch", {
 			controller: "PublicController",
-			templateUrl: "/app/views/public/dealer/dealerSearch"
+			templateUrl: "/app/views/public/dealer/dealerSearch.html"
 		})
 		.when("/public/dealer/vehicleListing",{
 			controller: "PublicController",
@@ -84,7 +80,7 @@ naBaseApp.config(function ($routeProvider) {
 		})
 		.when("/public/dealer/dealerSearchResults",{
 			controller: "PublicController",
-			templateUrl: "/app/views/public/dealer/dealerSearchResults"
+			templateUrl: "/app/views/public/dealer/dealerSearchResults.html"
 		})
 		
 		
