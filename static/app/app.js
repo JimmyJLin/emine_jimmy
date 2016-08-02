@@ -1,30 +1,30 @@
 var naBaseApp = angular.module("naBaseApp", [ "ngRoute" ]);
 
 naBaseApp.config(function ($routeProvider) {
-	
+
     $routeProvider
 		// non-public home
 		.when( "/home", {
 			controller: "HomeController",
 			templateUrl: "/app/partials/home/home.html"
 		})
-		
-		// data 
-		.when( "/data/profiles",{ 
-			controller: "DataProfileController", 
-		    templateUrl: "/app/partials/data/profiles.html" 
+
+		// data
+		.when( "/data/profiles",{
+			controller: "DataProfileController",
+		    templateUrl: "/app/partials/data/profiles.html"
 	    })
 		.when( "/data/profiles/:profile_id",{
 			controller: "DataProfileDetailController",
 			templateUrl: "/app/partials/data/profileDetail.html"
 		})
-		
+
 		// route for vehicles
 		.when( "/data/vehicles",{
 		    controller: "DataVehicleController",
 			templateUrl: "/app/partials/data/vehicles.html"
 		})
-		
+
 		// public/home
 		.when("/public/index",{
 			//redirectTo: "/home"
@@ -43,7 +43,7 @@ naBaseApp.config(function ($routeProvider) {
 			controller: "PublicController",
 			templateUrl: "/app/views/public/home/aboutWhoWeAre.html"
 		})
-		
+
 		// public/dealer area
 		.when("/public/dealer/dealerSignup",{
 			//redirectTo: "/public/index"
@@ -82,14 +82,14 @@ naBaseApp.config(function ($routeProvider) {
 			controller: "PublicController",
 			templateUrl: "/app/views/public/dealer/dealerSearchResults.html"
 		})
-		
-		
+
+
 		// public/tools
 		.when("/public/tools/vinDecoder", {
 			controller: "PublicController",
 			templateUrl: "/app/views/public/tools/vinDecoder.html"
 		})
-		
+
 		// public/vehicle
 		.when("/public/vehicle/vehicleListing", {
 			controller: "PublicController",
@@ -112,19 +112,19 @@ naBaseApp.config(function ($routeProvider) {
 			controller: "PublicController",
 			templateUrl: "/app/views/public/vehicle/searchResults.html"
 		})
-		
-		// public/test 
+
+		// public/test
 		.when("/public/test",{
 			controller: "PublicController",
 			templateUrl: "/app/views/public/vehicle/vehicleListing.html"
 		})
-        .when( "/",{ 
-			redirectTo: "/home" 
+        .when( "/",{
+			redirectTo: "/home"
 		})
-		
+
 		// end
         .otherwise({
-			redirectTo: 
-			"/404_page" 
+			redirectTo:
+			"/404_page"
 		});
 });
