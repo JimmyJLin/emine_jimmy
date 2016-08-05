@@ -52,7 +52,7 @@ naBaseApp.config(function ($routeProvider) {
 		// public/dealer area
 		.when("/public/dealer/dealerSignup",{
 			//redirectTo: "/public/index"
-			controller: "AuthController",
+			controller: "PublicController",
 			templateUrl: "/app/views/public/dealer/dealerSignup.html"
 		})
 		.when("/public/dealer/dealerSignin",{
@@ -123,7 +123,7 @@ naBaseApp.config(function ($routeProvider) {
 			controller: "PublicController",
 			templateUrl: "/app/views/public/vehicle/vehicleListing.html"
 		})
-      .when( "/",{
+        .when( "/",{
 			redirectTo: "/home"
 		})
 
