@@ -5,7 +5,7 @@
 
         $scope.page_load_error = null;
         $scope.finished_loading = false;
-		
+
 		function init(){
 			$scope.finished_loading = true;
 		}

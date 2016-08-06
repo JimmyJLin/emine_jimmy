@@ -4,7 +4,7 @@
 
         $scope.page_load_error = null;
         $scope.finished_loading = false;
-		
+
 		function get_vehicles(){
             $scope.vehicles = dataVehicleProvider.getVehicles(function (err, vehicles) {
                 $scope.finished_loading = true;
@@ -13,7 +13,7 @@
                 } else {
 					console.log("DEBUG => data --> " + vehicles);
                     $scope.vehicles = vehicles;
-                }                
+                }
             });
 		};
 
