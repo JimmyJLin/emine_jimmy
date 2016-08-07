@@ -1,31 +1,46 @@
-var naBaseApp = angular.module("naBaseApp", [ "ngRoute" ]);
+var naBaseApp = angular.module("naBaseApp", [ "ngRoute" ])
 
-naBaseApp.config(function ($routeProvider) {
+naBaseApp.config(function ($httpProvider, $routeProvider) {
+   $httpProvider.interceptors.push('AuthInterceptor')
 
     $routeProvider
-
 		// non-public home
 		.when( "/home", {
 			controller: "HomeController",
-			templateUrl: "/angular-app/home/home.html"
+			templateUrl: "/angular-app/home/home.html",
+      access:{
+        restricted:false
+      }
 		})
     // public/home
 		.when("/public/index", {
 			//redirectTo: "/home"
 			controller: "PublicController",
-			templateUrl: "/angular-app/main/index.html"
+			templateUrl: "/angular-app/main/index.html",
+      access:{
+        restricted:false
+      }
 		})
 		.when("/public/about/contact",{
 			controller: "PublicController",
-			templateUrl: "/angular-app/main/aboutContact.html"
+			templateUrl: "/angular-app/main/aboutContact.html",
+      access:{
+        restricted:false
+      }
 		})
 		.when("/public/about/faqs", {
 			controller: "PublicController",
-			templateUrl: "/angular-app/main/aboutFAQs.html"
+			templateUrl: "/angular-app/main/aboutFAQs.html",
+      access:{
+        restricted:false
+      }
 		})
 		.when("/public/about/whoweare", {
 			controller: "PublicController",
-			templateUrl: "/angular-app/main/aboutWhoWeAre.html"
+			templateUrl: "/angular-app/main/aboutWhoWeAre.html",
+      access:{
+        restricted:false
+      }
 		})
 
 
@@ -72,12 +87,15 @@ naBaseApp.config(function ($routeProvider) {
     // public/dealer area
     .when("/public/dealer/dealerSignup",{
       //redirectTo: "/public/index"
-      controller: "PublicController",
-      templateUrl: "/angular-app/dealer/dealer_signup/dealerSignup.html"
+      controller: "DealerSignupController",
+      templateUrl: "/angular-app/dealer/dealer_signup/dealerSignup.html",
+      controllerAs: 'vm'
+
     })
     .when("/public/dealer/dealerSignin",{
-      controller: "PublicController",
-      templateUrl: "/angular-app/dealer/dealer_signin/dealerSignin.html"
+      controller: "DealerSigninController",
+      templateUrl: "/angular-app/dealer/dealer_signin/dealerSignin.html",
+      controllerAs: 'vm'
     })
     .when("/public/dealer/addVehiclesByVIN", {
       controller: "PublicController",
@@ -137,4 +155,15 @@ naBaseApp.config(function ($routeProvider) {
 			redirectTo:
 			"/404_page"
 		});
+
 });
+
+
+naBaseApp.run(function($rootScope, $location, $window, AuthFactory){
+  $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
+    if(  nextRoute.access !== undefined && nextRoute.access.restricted && !window.sessionStorage.token && !AuthFactory.isSignedIn ) {
+      event.preventDefault();
+      $location.path('#/public/index')
+    }
+  });
+})
