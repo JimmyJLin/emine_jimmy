@@ -8,7 +8,7 @@
       vm.register = function(){
         console.log('this is from the register function' ,vm)
           var user = JSON.stringify({
-            submitter: "test",
+            submitter: "submitter",
             email: vm.email,
             password: vm.password,
             activity: 'add'
