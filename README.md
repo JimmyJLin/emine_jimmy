@@ -74,14 +74,6 @@ na.leanweb/
 
 #### REST APIs
 
-```
-{
-  'submitter': submitter,
-  'username': username,
-  'password': password,
-  'activity': 'add'
-}
-```
 #### API General Notes
 
 > API Root -  http://api.nationsauction.com/auth
