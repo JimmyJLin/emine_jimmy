@@ -72,12 +72,15 @@ naBaseApp.config(function ($routeProvider) {
     // public/dealer area
     .when("/public/dealer/dealerSignup",{
       //redirectTo: "/public/index"
-      controller: "PublicController",
-      templateUrl: "/angular-app/dealer/dealer_signup/dealerSignup.html"
+      controller: "DealerSignupController",
+      templateUrl: "/angular-app/dealer/dealer_signup/dealerSignup.html",
+      controllerAs: 'vm'
+
     })
     .when("/public/dealer/dealerSignin",{
       controller: "PublicController",
-      templateUrl: "/angular-app/dealer/dealer_signin/dealerSignin.html"
+      templateUrl: "/angular-app/dealer/dealer_signin/dealerSignin.html",
+      controllerAs: 'vm'
     })
     .when("/public/dealer/addVehiclesByVIN", {
       controller: "PublicController",
@@ -137,4 +140,5 @@ naBaseApp.config(function ($routeProvider) {
 			redirectTo:
 			"/404_page"
 		});
+
 });

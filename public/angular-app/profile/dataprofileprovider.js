@@ -3,7 +3,7 @@
     function dataProfileProvider ($http) {
 
         this._server_host = "";
-		
+
 		this.getAllProfiles = function(callback){
         	$http.get(this._server_host + "/v1/profiles.json")
             	.success(function (data, status, headers, conf) {
@@ -13,7 +13,7 @@
                 	callback(data);
             	});
 		};
-		
+
 		this.getProfiles = function(callback){
 			var getData = {
 				"submitter": "system"
@@ -30,7 +30,7 @@
 			    callback(data);
 			});
 		};
-		
+
 		this.getProfileByID = function (profile_id, callback){
 			var getData = {
 				"submitter": "system",
@@ -48,7 +48,7 @@
 			    callback(data);
 			});
 		};
-                
+
     }
 
     naBaseApp.service("dataProfileProvider", [ "$http", dataProfileProvider]);

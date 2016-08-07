@@ -1,10 +1,10 @@
 (function () {
 
-    function publicProvider ($http) {
+    function publicProvider ($http, $params) {
 
 
-        
-                
+
+
     }
 
     naBaseApp.service("publicProvider", [ "$http", publicProvider]);
