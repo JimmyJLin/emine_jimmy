@@ -54,8 +54,9 @@ naBaseApp.config(function ($httpProvider, $routeProvider) {
     // public/vehicle add
 
     .when('/public/vehicle/addvehicle', {
-      controller: "DataNewVehicleController",
-      templateUrl: "/angular-app/vehicle/vehicle_add/addVehicle.html"
+      controller: "VehiclesAddController",
+      templateUrl: "/angular-app/vehicle/vehicle_add/addVehicle.html",
+      controllerAs: 'vm'
     })
 
     // public/vehicle
