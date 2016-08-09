@@ -10,9 +10,9 @@ var app = express();
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + "/../static"));
+app.use(express.static(__dirname + "/../public"));
 
-			  
+
 var profiles = [ { profile_id: "mark_01",
                    name: "Mark",
 			       email: "mark@blueivytech.com",
@@ -29,7 +29,7 @@ var profiles = [ { profile_id: "mark_01",
 	               name: "Todd",
 				   email: "todd@blueivytech.com",
 				   vehicleCount: 7,
-				   description: "Dealer description for mark."},	 
+				   description: "Dealer description for mark."},
 			     {
 		           profile_id: "trevor_01",
 		           name: "Trevor",
@@ -102,7 +102,7 @@ function send_success_resp(res, obj) {
 
 function _http_code_from_error (error_code) {
     switch (error_code) {
-		
+
       	default:
         	return 503;
     }
