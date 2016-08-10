@@ -14,7 +14,7 @@
                 $scope.profile = profile;
             }
         });
-        
+
 
     }
 

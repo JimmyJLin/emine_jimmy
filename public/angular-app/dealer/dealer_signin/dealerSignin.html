@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<div id="panel">
-=======
 <div id="panel" ng-contoller="DealerSigninController as vm">
->>>>>>> 2aa77a45e6a7eae6d805fbc3ddf544187d0edb88
         <div id="stage">
 
 
@@ -10,25 +6,13 @@
                 <div class="row">
                     <div class="small-7 medium-4 columns">
                         <div class="public-site-header-logo">
-<<<<<<< HEAD
-                            <a href="/">
-                                <img src="/img/na-logo-white-red.png" alt="Logo">
-=======
                             <a href="#/public/index">
                                 <img src="src/img/na-logo-white-red.png" alt="Logo">
->>>>>>> 2aa77a45e6a7eae6d805fbc3ddf544187d0edb88
                             </a>
                         </div>
                     </div>
 
                     <div class="small-5 medium-8 columns">
-<<<<<<< HEAD
-                        <nav class="public-site-header-nav">
-                            <ul class="has-button">
-                                <li><span>Need an Account?</span> <a class="desktop-link button-link" href="/Dealer/DealerSignupInfo">Sign Up</a></li>
-                            </ul>
-                        </nav>
-=======
                         <nav class="public-site-header-nav" ng-if="vm.isSignedIn">
                             <ul class="has-button">
                                 <li><span>Need an account ?</span> <a class="desktop-link button-link" ng-href="#/public/dealer/dealerSignup">Sign up</a></li>
@@ -40,48 +24,24 @@
                             </ul>
                         </nav>
 
->>>>>>> 2aa77a45e6a7eae6d805fbc3ddf544187d0edb88
                     </div>
                 </div>
             </header>
 
-<<<<<<< HEAD
-            <div class="centered-auction-icon">
-                <div class="row">
-                    <div class="small-12 columns">
-                        <img src="/img/auction-icon-red.png">
-=======
 
             <div class="centered-auction-icon">
                 <div class="row">
                     <div class="small-12 columns">
                         <img src="src/img/auction-icon-red.png">
->>>>>>> 2aa77a45e6a7eae6d805fbc3ddf544187d0edb88
                     </div>
                 </div>
             </div>
 
-<<<<<<< HEAD
-            <main id="main">
-=======
             <main id="main" ng-if="!vm.isSignedIn()">
->>>>>>> 2aa77a45e6a7eae6d805fbc3ddf544187d0edb88
                 <div class="row">
                     <div class="small-12 columns">
                         <div class="na-section">
                             <h1 class="centered-text all-caps-text">
-<<<<<<< HEAD
-                                Welcome! Please Log In
-                            </h1>
-
-                            <div id="divLoginNormal">
-                                <form class="na-login-form" id="dealer-log-in-normal" action="/">
-                                    <div class="row">
-                                        <div class="small-12 columns">
-                                            <input type="email" class="na-input-text" id="txtEmail" placeholder="email" required>
-                                            <input type="password" class="na-input-text" id="txtPassword" placeholder="password" required>
-                                            <input class="na-input-submit blue" id="btnLogIn" type="button" value="Log In">
-=======
                                 Welcome! Please Sign In
                             </h1>
 
@@ -102,7 +62,6 @@
                                           <input type="password" class="na-input-text" id="dealer-password" ng-model="vm.password" placeholder="password" required>
                                           <input type="password" class="na-input-text" id="dealer-password-repeat" ng-model="vm.passwordRepeat"  placeholder="reenter password" required>
                                             <button class="na-input-submit blue" id="btnLogIn" type="submit" value="Sign In">Sign In</button>
->>>>>>> 2aa77a45e6a7eae6d805fbc3ddf544187d0edb88
 
                                             <div class="centered-text">
                                                 <a class="forgot-password" href="#">
@@ -111,11 +70,7 @@
 
                                                 <p style="margin-bottom: 10px; color: #666;">Need an account?</p>
 
-<<<<<<< HEAD
-                                                <a href="#" class="na-blue-hollow-button full-width-button">
-=======
                                                 <a href="/#/public/dealer/dealerSignup" class="na-blue-hollow-button full-width-button">
->>>>>>> 2aa77a45e6a7eae6d805fbc3ddf544187d0edb88
                                                     Sign Up
                                                 </a>
                                             </div>
@@ -134,11 +89,7 @@
 
                                             <input type="email" class="na-input-text error" placeholder="email" required>
                                             <input type="password" class="na-input-text error" placeholder="password" required>
-<<<<<<< HEAD
-                                            <input class="na-input-submit blue" type="button" value="Log In">
-=======
                                             <input class="na-input-submit blue" type="button" value="Sign In">
->>>>>>> 2aa77a45e6a7eae6d805fbc3ddf544187d0edb88
 
                                             <div class="centered-text">
                                                 <a class="forgot-password" href="#">
@@ -147,11 +98,7 @@
 
                                                 <p style="margin-bottom: 10px; color: #666;">Need an account?</p>
 
-<<<<<<< HEAD
-                                                <a href="/Dealer/DealerSignupInfo" class="na-blue-hollow-button full-width-button">
-=======
                                                 <a href="#/public/dealer/dealerSignup" class="na-blue-hollow-button full-width-button">
->>>>>>> 2aa77a45e6a7eae6d805fbc3ddf544187d0edb88
                                                     Sign Up
                                                 </a>
                                             </div>
@@ -164,14 +111,6 @@
                 </div>
             </main>
 
-<<<<<<< HEAD
-
-        </div><!--end of stage-->
-
-        <div ng-include src="'app/views/public/shared/footer.html'"></div>
-    </div>
-</div>
-=======
             <main ng-if="vm.isSignedIn()"> You successfully signed in.
               <br><br><br>
               <form ng-submit="vm.signout()" >
@@ -184,4 +123,3 @@
         <div ng-include src="'angular-app/partials/footer.html'"></div>
     </div>
 </div>
->>>>>>> 2aa77a45e6a7eae6d805fbc3ddf544187d0edb88
