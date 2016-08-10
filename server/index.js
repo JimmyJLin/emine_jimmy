@@ -10,17 +10,10 @@ var app = express();
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-<<<<<<< HEAD
 
 // changed static page from static to public
 app.use(express.static(__dirname + "/../public"));
 
-
-=======
-app.use(express.static(__dirname + "/../public"));
-
-
->>>>>>> 2aa77a45e6a7eae6d805fbc3ddf544187d0edb88
 var profiles = [ { profile_id: "mark_01",
                    name: "Mark",
 			       email: "mark@blueivytech.com",
