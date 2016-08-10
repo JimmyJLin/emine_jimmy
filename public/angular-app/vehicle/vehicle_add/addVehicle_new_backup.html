@@ -1,27 +1,48 @@
 <div id="panel">
   <div id="stage">
-    <div ng-include src="'angular-app/partials/header.html'"></div>
 
+    <header class="public-site-header">
+      <div class="row">
+        <div class="small-9 medium-4 columns">
+          <div class="public-site-header-logo">
+            <a href="/">
+              <img src="/src/img/na-logo-white-red.png" alt="Logo">
+            </a>
+          </div>
+        </div>
+
+        <div class="small-3 medium-8 columns">
+          <nav class="public-site-header-nav">
+            <ul>
+              <li><a class="desktop-link" href="/Vehicle/VehicleSearch?newused=new">New Cars</a></li>
+              <li><a class="desktop-link" href="/Vehicle/VehicleSearch?newused=used">Used Cars</a></li>
+              <li><a class="desktop-link" href="/Dealer/DealerSearch">Find Local Dealers</a></li>
+              <li><a class="mobile-link" id="open-slideout-menu" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
 
     <main id="main">
 
       <!-- Add Vehicle -->
-      <form ng-submit="vm.addVehicle()" >
+      <form ng-submit="addVehicle()" ng-controller="VehiclesAddController">
         <h3>Add Vehicle</h3>
 
         <!-- Vin -->
-        <!-- <div class="row">
+        <div class="row">
           <Label>Vin:</Label>
           <div class="large-6 columns">
             <input type="text" ng-model="vin" placeholder="Vehicle Vin Number" required />
           </div>
-        </div> -->
+        </div>
 
         <!-- Year -->
         <div class="row">
           <label>Year:</label>
           <div class="large-6 columns">
-              <select class="na-select" ng-model="vm.year" id="select_year_min">
+              <select class="na-select" ng-model="year" id="select_year_min">
                 <option value="0" selected>Year</option>
                 <option value="1">2017</option>
                 <option value="2">2016</option>
@@ -39,7 +60,7 @@
         <div class="row">
           <label>Make:</label>
           <div class="large-6 columns">
-              <select class="na-select" ng-model="vm.make">
+              <select class="na-select" ng-model="make">
                 <option value="0" selected>Make</option>
                 <option value="1">Make 1</option>
                 <option value="2">Make 2</option>
@@ -57,7 +78,7 @@
         <div class="row">
           <label>Model:</label>
           <div class="large-6 columns">
-              <select class="na-select" ng-model="vm.model">
+              <select class="na-select" ng-model="model">
                 <option value="0" selected>Model</option>
                 <option value="1">Model 1</option>
                 <option value="2">Model 2</option>
@@ -75,7 +96,7 @@
         <div class="row">
           <label>Type:</label>
           <div class="large-6 columns">
-              <select class="na-select" ng-model="vm.type">
+              <select class="na-select" ng-model="type">
                 <option value="0" selected>Type</option>
                 <option value="1">Type 1</option>
                 <option value="2">Type 2</option>
@@ -92,7 +113,7 @@
         <div class="row">
           <label>Description:</label>
           <div class="large-6 columns">
-            <textarea ng-model="vm.description" rows="8" cols="40"></textarea>
+            <textarea ng-model="description" rows="8" cols="40"></textarea>
           </div>
         </div>
 
@@ -100,14 +121,14 @@
         <div class="row">
           <Label>Price:</Label>
           <div class="large-6 columns">
-            <input type="number" ng-model="vm.vin" required />
+            <input type="number" ng-model="vin" required />
           </div>
         </div>
 
         <!-- Submit -->
         <div class="row">
           <div class="large-12 columns">
-            <button class="btn btn-danger">Add Vehicle</button>
+            <input type="submit" value="Add Vehicle" class="button" />
           </div>
         </div>
       </form>
@@ -116,5 +137,5 @@
 
     </div><!--end of stage-->
 
-    <div ng-include src="'angular-app/partials/footer.html'"></div>
+  <div ng-include src="'app/views/public/shared/footer.html'"></div>
 </div>

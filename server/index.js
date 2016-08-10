@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 // changed static page from static to public
 app.use(express.static(__dirname + "/../public"));
 
-
 var profiles = [ { profile_id: "mark_01",
                    name: "Mark",
 			       email: "mark@blueivytech.com",

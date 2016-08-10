@@ -3,7 +3,6 @@
     function dataProfileProvider ($http) {
 
         this._server_host = "";
-
 		this.getAllProfiles = function(callback){
         	$http.get(this._server_host + "/v1/profiles.json")
             	.success(function (data, status, headers, conf) {
