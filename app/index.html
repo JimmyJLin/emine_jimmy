@@ -7,35 +7,32 @@
 </head>
 <body>
 
-  <div id="content" ng-view>
+<main role="main" ng-view>
 
-  </div>
+</main>
 
+<!-- Script libraries -->
+<script type='text/javascript' src="library/angular.min.js"></script>
+<script type='text/javascript' src="library/angular-route.min.js"></script>
+<script type='text/javascript' src="library/jQuery.min.js"></script>
+<script type='text/javascript' src="library/bootstrap.min.js"></script>
 
+<!-- controllers -->
+<!-- New Angular-app Controllers -->
+<!-- api_data controllers -->
+<script type='text/javascript' src="angular-app/api_data/datavehicle.controller.js"></script>
+<script type='text/javascript' src="angular-app/api_data/dataprofile.controller.js"></script>
+<script type='text/javascript' src="angular-app/api_data/dataprofiledetail.controller.js"></script>
 
-
-	<!-- Script libraries -->
-	<script type='text/javascript' src="library/angular.min.js"></script>
-	<script type='text/javascript' src="library/angular-route.min.js"></script>
-	<script type='text/javascript' src="library/jQuery.min.js"></script>
-	<script type='text/javascript' src="library/bootstrap.min.js"></script>
-
-	<!-- controllers -->
-	<!-- New Angular-app Controllers -->
-	<!-- api_data controllers -->
-	<script type='text/javascript' src="angular-app/api_data/datavehicle.controller.js"></script>
-	<script type='text/javascript' src="angular-app/api_data/dataprofile.controller.js"></script>
-	<script type='text/javascript' src="angular-app/api_data/dataprofiledetail.controller.js"></script>
-
-	<!-- Nations Auction Controllers -->
-	<script type='text/javascript' src="angular-app/app.js"></script>
-	<script type='text/javascript' src="angular-app/vehicle/vehicle_add/vehicle_add.controller.js"></script>
-	<script type='text/javascript' src="angular-app/main/public.controller.js"></script>
+<!-- Nations Auction Controllers -->
+<script type='text/javascript' src="angular-app/app.js"></script>
+<script type='text/javascript' src="angular-app/vehicle/vehicle_add/vehicle_add.controller.js"></script>
+<script type='text/javascript' src="angular-app/main/public.controller.js"></script>
 
 
 
 	<!-- Old Static-app Controllers -->
-	<script type='text/javascript' src="angular-app/home/home.controller.js"</script>
+	<script type='text/javascript' src="angular-app/home/home.controller.js"></script>
 	<script type='text/javascript' src="angular-app/vehicle/vehicle_add/datanewvehicle.controller.js"></script>
 	<script type='text/javascript' src="angular-app/dealer/dealer_signup/dealersignup.controller.js"></script>
 	<script type='text/javascript' src="angular-app/dealer/dealer_signin/dealersignin.controller.js"></script>
@@ -49,12 +46,12 @@
 	<script type='text/javascript' src="angular-app/api_data/dataprofileprovider.js"></script>
 
 
-	<!-- Old providers -->
-	<!-- <script type='text/javascript' src="angular-app/vehicle/vehicle_search/publicProvider.js"></script> -->
+<!-- Old providers -->
+<!-- <script type='text/javascript' src="angular-app/vehicle/vehicle_search/publicProvider.js"></script> -->
 
-	<!-- factories -->
-	<script type='text/javascript' src="angular-app/dealer/auth/auth-factory.js"></script>
-	<script type='text/javascript' src="angular-app/dealer/auth/auth-intecepter.js"></script>
+<!-- factories -->
+<script type='text/javascript' src="angular-app/dealer/auth/auth-factory.js"></script>
+<script type='text/javascript' src="angular-app/dealer/auth/auth-intecepter.js"></script>
 
 
 </body>
