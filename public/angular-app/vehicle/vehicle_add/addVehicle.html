@@ -3,7 +3,7 @@
     <div ng-include src="'angular-app/partials/header.html'"></div>
 
 
-    <main id="main">
+    <main id="main" >
 
       <!-- Add Vehicle -->
       <form ng-submit="vm.addVehicle()" >
@@ -100,21 +100,18 @@
         <div class="row">
           <Label>Price:</Label>
           <div class="large-6 columns">
-            <input type="number" ng-model="vm.vin" required />
+            <input type="number" ng-model="vm.price" required />
           </div>
         </div>
 
         <!-- Submit -->
-        <div class="row">
-          <div class="large-12 columns">
-            <button class="btn btn-danger">Add Vehicle</button>
-          </div>
-        </div>
+            <button class="btn btn-danger"  type="submit" >Add Vehicle</button>
       </form>
 
     </main>
 
-    </div><!--end of stage-->
-
     <div ng-include src="'angular-app/partials/footer.html'"></div>
+
+
+    </div><!--end of stage-->
 </div>
