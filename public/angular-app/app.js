@@ -31,7 +31,7 @@ naBaseApp.config(function ($routeProvider) {
 
     // route for vehicles
 
-    .when( "/data/vehicles",{
+    .when( "/data/vehicles",{   // get all vehicles by owner id
       controller: "DataVehicleController",
       templateUrl: "/angular-app/vehicle/vehicle_show_all/vehicles.html"
     })
