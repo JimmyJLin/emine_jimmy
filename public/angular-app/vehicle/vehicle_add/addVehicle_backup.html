@@ -7,7 +7,7 @@
                     <div class="small-9 medium-4 columns">
                         <div class="public-site-header-logo">
                             <a href="/">
-                                <img src="/img/na-logo-white-red.png" alt="Logo">
+                                <img src="/src/img/na-logo-white-red.png" alt="Logo">
                             </a>
                         </div>
                     </div>
@@ -29,40 +29,17 @@
                 <div class="row">
                     <div class="small-12 columns">
                         <div class="na-section">
-                            <h1 class="centered-text all-caps-text">Advanced Vehicle Search</h1>
+                            <h1 class="centered-text all-caps-text">Add Vehicle</h1>
 
                             <form class="na-default-form" id="advanced-search-form" action="/">
                                 <div class="row">
                                     <div class="small-12 medium-10 medium-centered medium-large-8 medium-large-centered columns">
-                                        <div class="row">
-                                            <div class="small-6 columns">
-                                                <label>Search Radius</label>
-                                                <select class="na-select" id="select_search_radius">
-                                                    <option value="0" selected>All Miles</option>
-                                                    <option value="1" selected>10 Miles</option>
-                                                    <option value="2" selected>20 Miles</option>
-                                                    <option value="3" selected>30 Miles</option>
-                                                    <option value="4" selected>40 Miles</option>
-                                                    <option value="5" selected>50 Miles</option>
-                                                    <option value="6" selected>75 Miles</option>
-                                                    <option value="7" selected>100 Miles</option>
-                                                    <option value="8" selected>250 Miles</option>
-                                                    <option value="9" selected>500 Miles</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="small-6 columns">
-                                                <label>ZIP Code</label>
-                                                <input type="text" class="na-input-text na-zip-code" id="enter_zip_code" placeholder="ZIP Code">
-                                            </div>
-                                        </div>
 
                                         <label for="select_vehicle_type">Vehicle Type</label>
                                         <select class="na-multiselect" style="width: 100%;" id="select_vehicle_type" multiple="multiple" data-placeholder="Select Vehicle Type">
                                             <option value="0" selected>New</option>
                                             <option value="1">Used</option>
                                             <option value="2">Certified Pre-owned</option>
-                                            <option value="3">All</option>
                                         </select>
 
                                         <label>Price Range</label>
@@ -329,10 +306,10 @@
 
                                 <div class="row">
                                     <div class="small-12 columns centered-text">
-                                        <input class="na-input-submit" style="max-width: 370px" id="btnFindRide" type="button" value="Let's Find Your Ride!">
+                                        <input class="na-input-submit" style="max-width: 370px" id="btnFindRide" type="button" value="Add Your Vehicle!">
 
                                         <p>
-                                            <a class="reset-form" href="#">Reset search form</a>
+                                            <a class="reset-form" href="#">Reset Add form</a>
                                         </p>
                                     </div>
                                 </div>

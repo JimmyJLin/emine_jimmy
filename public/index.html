@@ -29,24 +29,36 @@
 	<script type='text/javascript' src="library/bootstrap.min.js"></script>
 
 	<!-- controllers -->
-  <script type='text/javascript' src="angular-app/app.js"></script>
-	<script type='text/javascript' src="angular-app/home/home.controller.js"</script>
+	<!-- New Angular-app Controllers -->
+	<!-- api_data controllers -->
+	<script type='text/javascript' src="angular-app/api_data/datavehicle.controller.js"></script>
+	<script type='text/javascript' src="angular-app/api_data/dataprofile.controller.js"></script>
+	<script type='text/javascript' src="angular-app/api_data/dataprofiledetail.controller.js"></script>
+
+	<!-- Nations Auction Controllers -->
+	<script type='text/javascript' src="angular-app/app.js"></script>
+	<script type='text/javascript' src="angular-app/vehicle/vehicle_add/vehicle_add.controller.js"></script>
 	<script type='text/javascript' src="angular-app/main/public.controller.js"></script>
-	<script type='text/javascript' src="angular-app/vehicle/vehicle_show_all/datavehicle.controller.js"></script>
+
+
+
+	<!-- Old Static-app Controllers -->
+	<script type='text/javascript' src="angular-app/home/home.controller.js"</script>
 	<script type='text/javascript' src="angular-app/vehicle/vehicle_add/datanewvehicle.controller.js"></script>
-	<script type='text/javascript' src="angular-app/vehicle/vehicle_search/public.controller.js"></script>
 	<script type='text/javascript' src="angular-app/dealer/dealer_signup/dealersignup.controller.js"></script>
 	<script type='text/javascript' src="angular-app/dealer/dealer_signin/dealersignin.controller.js"></script>
-	<script type='text/javascript' src="angular-app/profile/dataprofile.controller.js"></script>
-	<script type='text/javascript' src="angular-app/profile/dataprofiledetail.controller.js"></script>
 
 	<!-- providers -->
+	<script type='text/javascript' src="angular-app/vehicle/vehicle_add/vehicleProvider.js"></script>
+	<script type='text/javascript' src="angular-app/api_data/datavehicleprovider.js"></script>
 	<script type='text/javascript' src="angular-app/home/homeProvider.js"></script>
 	<script type='text/javascript' src="angular-app/main/publicProvider.js"></script>
-	<script type='text/javascript' src="angular-app/vehicle/vehicle_show_all/datavehicleprovider.js"></script>
-	<script type='text/javascript' src="angular-app/vehicle/vehicle_search/publicProvider.js"></script>
 	<script type='text/javascript' src="angular-app/dealer/dealerProvider.js"></script>
-	<script type='text/javascript' src="angular-app/profile/dataprofileprovider.js"></script>
+	<script type='text/javascript' src="angular-app/api_data/dataprofileprovider.js"></script>
+
+
+	<!-- Old providers -->
+	<!-- <script type='text/javascript' src="angular-app/vehicle/vehicle_search/publicProvider.js"></script> -->
 
 	<!-- factories -->
 	<script type='text/javascript' src="angular-app/dealer/auth/auth-factory.js"></script>
