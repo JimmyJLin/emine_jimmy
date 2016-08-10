@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-
 var naBaseApp = angular.module("naBaseApp", [ "ngRoute" ])
 
 naBaseApp.config(function ($httpProvider, $routeProvider) {
    $httpProvider.interceptors.push('AuthInterceptor')
 
-=======
-var naBaseApp = angular.module("naBaseApp", [ "ngRoute" ])
-
-naBaseApp.config(function ($httpProvider, $routeProvider) {
-   $httpProvider.interceptors.push('AuthInterceptor')
-
->>>>>>> 09d8b60fd04c16795a180093829b64f75ea50140
     $routeProvider
 		// non-public home
 		.when( "/home", {
