@@ -69,8 +69,9 @@ naBaseApp.config(function ($httpProvider, $routeProvider) {
       templateUrl: "/angular-app/vehicle/vehicle_search/advancedSearch.html"
     })
     .when("/public/vehicle/vehicleDetail", {
-      controller: "PublicController",
-      templateUrl: "/angular-app/vehicle/vehicle_show_one/vehicleDetail.html"
+      controller: "VehicleDetailController",
+      templateUrl: "/angular-app/vehicle/vehicle_show_one/vehicleDetail.html",
+      controllerAs: 'vm'
     })
     .when("/public/vehicle/newVehicle", {
       controller: "PublicController",
