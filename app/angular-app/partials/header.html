@@ -1,21 +1,45 @@
-<header class="public-site-header">
-	<div class="row">
-        <div class="small-9 medium-4 columns">
-        	<div class="public-site-header-logo">
-            	<a ng-href="#/public/index">
-               		<img src="../../src/img/na-logo-white-red.png" alt="Logo" />
-                </a>
-            </div>
-        </div>
-        <div class="small-3 medium-8 columns">
-            <nav class="public-site-header-nav">
-                <ul>
-                    <li><a class="desktop-link" ng-href="#/public/vehicle/newVehicle">New Cars</a></li>
-                    <li><a class="desktop-link" ng-href="#/public/vehicle/usedVehicle">Used Cars</a></li>
-                    <li><a class="desktop-link" ng-href="#/public/dealer/dealerSearch">Find Local Dealers</a></li>
-                    <li><a class="mobile-link" id="open-slideout-menu" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
-                </ul>
-            </nav>
-        </div>
-	</div>
-</header>
+<div class="toolbar">
+  <h1><a ng-href="/" class="logo">Nations Auction</a></h1>
+  <nav>
+    <ul>
+      <li><input tabindex="-1" type="search" /></li>
+      <li ng-if="vm.isSignedIn()">
+        <i class="menu" tabindex="-1">Alerts</i>
+        <menu>
+          <ul>
+            <li>Notification Message</li>
+            <li>Notification Message</li>
+            <li>Notification Message</li>
+            <li>Notification Message</li>
+            <li>Notification Message</li>
+            <li>Notification Message</li>
+          </ul>
+        </menu>
+      </li>
+      <li ng-if="vm.isSignedIn()">
+        <i class="menu" tabindex="-1">Profile</i>
+        <menu>
+          <ul>
+            <li>Menu Item</li>
+            <li>Menu Item</li>
+            <li>Menu Item</li>
+            <li>Menu Item</li>
+            <li class="signout">Sign Out</li>
+          </ul>
+        </menu>
+      </li>
+      <li ng-if="!vm.isSignedIn()">
+        <a ng-href="#/public/dealer/dealerSignin">Signup/Signin</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<nav>
+  <ul>
+    <li><a ng-href="">Home</a></li>
+    <li><a ng-href="">Vehicles</a></li>
+    <li><a ng-href="">Marketplace</a></li>
+    <li><a ng-href="">Inventory</a></li>
+    <li><a ng-href="">Watchlist</a></li>
+  </ul>
+</nav>

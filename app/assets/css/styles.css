@@ -3,3 +3,146 @@ body {
   line-height: 1em;
   background-color: #f1f2f1;
 }
+
+i {
+  font-weight: normal;
+  font-style: normal;
+}
+
+*:focus {
+  border: none;
+  outline: 0;
+}
+
+.flex, .inline,
+header.main .toolbar,
+header.main nav > ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.nowrap {
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+
+
+main {
+  position: relative;
+}
+
+header.main {
+  background-color: #21295f;
+}
+
+header.main .toolbar {
+}
+
+header.main .toolbar nav {
+  margin-left: auto;
+}
+
+header.main .toolbar nav li {
+  position: relative;
+}
+
+header.main .toolbar nav i {
+  padding: 1rem;
+}
+
+header.main > nav {
+}
+
+header.main > nav li a {
+  padding: 1rem;
+  display: block;
+}
+
+header.main > nav li:last-child {
+  margin-left: auto;
+}
+
+header.main .logo {
+  height: 1em;
+  overflow: hidden;
+  line-height: 4em;
+  font-size: 2em;
+  background: url(../img/logo-white@2x.png) left center no-repeat;
+  background-size: contain;
+  letter-spacing: -3px;
+  display: block;
+  margin: 1rem;
+}
+
+header.main > nav {
+  background-color: white;
+}
+
+/* @group dropdown menu */
+
+.menu {
+  position: relative;
+}
+
+.menu:not(:focus) {
+  cursor: pointer;
+}
+
+.menu + menu {
+  position: absolute;
+  background-color: white;
+  top: 2em;
+  min-width: 160px;
+  right: calc(-50% - 10px);
+}
+
+li:last-child .menu + menu {
+  right: .5rem;
+}
+
+.menu + menu li {
+  border-bottom: 1px solid #efefef;
+  font-size: .9em;
+  padding: .5rem;
+}
+
+.menu + menu:before {
+  content: "";
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  
+  border-bottom: 10px solid white;
+  position: absolute;
+  top: -10px;
+  right: calc(50% - 10px);
+}
+
+li:last-child .menu + menu:before {
+  right: 1rem;
+}
+
+.menu:not(:focus) + menu {
+  display: none;
+}
+
+.menu:focus + menu {
+  display: block;
+}
+
+/* @end */
+
+footer.main {
+
+}

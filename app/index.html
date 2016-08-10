@@ -7,7 +7,12 @@
 </head>
 <body>
 
-<main role="main" ng-view></main>
+<main role="main">
+  <header class="main" ng-include src="'angular-app/partials/header.html'"></header>
+  <section ng-view>
+  </section>
+  <footer class="main" ng-include src="'angular-app/partials/footer.html'"></footer>
+</main>
 
 <!-- Script libraries -->
 <script type='text/javascript' src="library/angular.min.js"></script>
