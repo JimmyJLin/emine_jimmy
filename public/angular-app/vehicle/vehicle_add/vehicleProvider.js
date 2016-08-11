@@ -14,8 +14,6 @@
 
       }
 
-
-
     }
 
     naBaseApp.service("vehicleProvider", [ "$http", vehicleProvider]);

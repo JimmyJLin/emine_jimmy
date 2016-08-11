@@ -58,6 +58,14 @@ naBaseApp.config(function ($httpProvider, $routeProvider) {
       templateUrl: "/angular-app/vehicle/vehicle_add/addVehicle.html",
       controllerAs: 'vm'
     })
+    // public/ add vehicle condition
+
+    .when('/public/vehicle/addvehiclecondition', {
+      controller: "AddConditionController",
+      templateUrl: "/angular-app/vehicle/condition/addvehiclecondition.html",
+      controllerAs: 'vm'
+      })
+
 
     // public/vehicle
     .when("/public/vehicle/vehicleListing", {
@@ -84,6 +92,7 @@ naBaseApp.config(function ($httpProvider, $routeProvider) {
       controller: "PublicController",
       templateUrl: "/angular-app/vehicle/vehicle_search/searchResults.html"
     })
+
 
     // public/dealer area
     .when("/public/dealer/dealerSignup",{
