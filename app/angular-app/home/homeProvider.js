@@ -4,8 +4,8 @@
 
         this._server_host = "";
 
-        
-                
+
+
     }
 
     naBaseApp.service("homeProvider", [ "$http", homeProvider]);

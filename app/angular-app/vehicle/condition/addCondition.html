@@ -1,39 +1,15 @@
-<div id="panel" ng-contoller="DealerSigninController as vm">
+<div id="panel">
         <div id="stage">
+
+
         <main id="main">
                 <div class="row">
-                    <div class="small-12 columns">
-                                <form class="na-login-form" ng-hide="vm.message"  name="signin" ng-submit="vm.signin()" id="dealer-log-in-normal">
-                                    <div class="row">
-                                        <div class="small-12 columns">
-                                          <input type="email" class="na-input-text" id="dealer-email" ng-model="vm.email" placeholder="email" required>
-                                          <input type="password" class="na-input-text" id="dealer-password" ng-model="vm.password" placeholder="password" required>
-                                          <input type="password" class="na-input-text" id="dealer-password-repeat" ng-model="vm.passwordRepeat"  placeholder="reenter password" required>
-                                            <button class="na-input-submit blue" id="btnLogIn" type="submit" value="Sign In">Sign In</button>
-
-                                            <div class="centered-text">
-                                                <a class="forgot-password" href="#">
-                                                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> &nbsp;Forgot Password?
-                                                </a>
-
-                                                <p style="margin-bottom: 10px; color: #666;">Need an account?</p>
-
-                                                <a href="/#/public/dealer/dealerSignup" class="na-blue-hollow-button full-width-button">
-                                                    Sign Up
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                  <form ng-submit="vm.addCond()" >
+                                  <input type="text" class="na-input-text" placeholder="Please input condition" ng-model="vm.condition" required>
+                                  <button class="na-input-submit blue" type="submit" >Add</button>
                                 </form>
-                            </div>
-
-                        </div>
-                    </div>
                 </div>
             </main>
 
         </div><!--end of stage-->
-
-        <div ng-include src="'angular-app/partials/footer.html'"></div>
-    </div>
 </div>

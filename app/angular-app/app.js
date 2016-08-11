@@ -65,6 +65,11 @@ naBaseApp.config(function ($httpProvider, $routeProvider) {
     templateUrl: "/angular-app/vehicle/vehicle_list/vehicleslist.html",
     controllerAs: 'vm'
   })
+  .when('/public/vehicle/vehiclecondition', {
+    controller: "AddConditionController",
+    templateUrl: "/angular-app/vehicle/condition/addCondition.html",
+    controllerAs: 'vm'
+  })
 
 
 	// Redirect to 404
