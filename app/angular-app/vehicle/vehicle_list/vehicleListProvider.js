@@ -1,12 +1,15 @@
 (function () {
 
     function vehicleListProvider ($http) {
+      var vm = this;
 
       this.getVehicleByOwnerID = function(vehicleListData){
         console.log(vehicleListData)
         $http({
-          method: 'POST',
           url: 'http://api.nationsauction.com/inventory/Vehicle/GetByOwner',
+          method: 'POST',
+          cache: 'false',
+          contentType: 'application/json',
           headers: {'Content-Type': 'application/json'},
           data: vehicleListData
         })
