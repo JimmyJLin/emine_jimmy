@@ -13,7 +13,7 @@ function VehiclesAddController($scope, vehicleProvider){
     'type': vm.type,
     'description': vm.description,
     'price': vm.price,
-    'owner': vm.owner,
+    'owner': '617a69c3-bd34-445c-a762-1bbcf228f7bb',
     'activity': 'add'
   })
 
