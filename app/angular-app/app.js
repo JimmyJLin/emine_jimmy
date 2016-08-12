@@ -5,30 +5,9 @@ naBaseApp.config(function ($httpProvider, $routeProvider) {
 
     $routeProvider
 
-    /* API Test Page */
-    .when( "/data/vehicles",{
-      controller: "DataVehicleController",
-      templateUrl: "/angular-app/vehicle/vehicle_show_all/vehicles.html"
-    })
-    .when( "/data/profiles",{
-			controller: "DataProfileController",
-		    templateUrl: "/angular-app/profile/profiles.html"
-	    })
-		.when( "/data/profiles/:profile_id",{
-			controller: "DataProfileDetailController",
-			templateUrl: "/angular-app/profile/profileDetail.html"
-		})
-
     /* Landing Page */
     .when( "/",{
-			redirectTo: "/home"
-		})
-    .when( "/home", {
-			controller: "HomeController",
-			templateUrl: "/angular-app/home/home.html",
-      access:{
-        restricted:false
-      }
+			redirectTo: "/public/index"
 		})
     .when("/public/index", {
 			//redirectTo: "/home"
