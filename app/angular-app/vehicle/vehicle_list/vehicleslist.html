@@ -5,12 +5,17 @@
 
       <div>
 
-      <h3>Vehicle(s) List by Owner</h3>
-      <div ng-init="vm.listVehicles()">
+      <div>
+        <h1>{{ vm.title }} by Owner</h1>
 
-        <ul ng-repeat="vehicle in vm.listVehicles">
-          <li>{{ vm.vehicle.ItemName}}</li>
+        <ul ng-repeat="vehicle in vehicles  track by $index">
+          <li> {{ vehicle.ID }}</li>
+          <li> {{ vehicle.Make }}</li>
+          <li> {{ vehicle.Model }}</li>
+          <li> {{ vehicle.VIN }}</li>
+
         </ul>
+
       </div>
 
     </div>

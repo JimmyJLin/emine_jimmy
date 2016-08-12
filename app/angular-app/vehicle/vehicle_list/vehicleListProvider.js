@@ -1,31 +1,35 @@
 (function () {
 
     function vehicleListProvider ($http) {
-      var vm = this;
 
-      this.getVehicleByOwnerID = function(vehicleListData){
-        // console.log(vehicleListData)
-        $http({
-          url: 'http://api.nationsauction.com/inventory/Vehicle/GetByOwner',
-          method: 'POST',
-          cache: 'false',
-          contentType: 'application/json',
-          headers: {'Content-Type': 'application/json'},
-          data: vehicleListData
+
+    this.getVehicleByOwnerID = function (callback){
+
+      var ownerGuid = "617a69c3-bd34-445c-a762-1bbcf228f7bb"
+
+        var vehicleListData = JSON.stringify({
+          'submitter': "submitter",
+          'ownerGuid': ownerGuid,
+          'activity': 'getbyowner'
         })
-        // $http.post('http://api.nationsauction.com/inventory/Vehicle/GetByOwner', vehicleListData)
-          .then(function(response){
-            vm.vehicles = response.data
-
-            console.log('this is the response', vm.vehicles)
-          })
-          .catch(function(error){
-            console.log("Unable to get vehicle data, error: ", error)
-          })
-
-      }
 
 
+        $http({
+        			    url: 'http://api.nationsauction.com/inventory/Vehicle/GetByOwner',
+        			    method: "POST",
+        			    data: vehicleListData,
+        			    headers: {'Content-Type': 'application/json'}
+        			}).success(function (data, status, headers, config) {
+        				console.log("DEBUG => data > " + data);
+        				var testData = JSON.parse(data);
+
+        				console.log("DEBUG => testData raw > " + testData);
+        				console.log("DEBUG => testData > " + JSON.stringify(testData));
+        			    callback(null, testData);
+        			}).error(function (data, status, headers, config) {
+        			    callback(data);
+        			});
+        		};
 
     }
 

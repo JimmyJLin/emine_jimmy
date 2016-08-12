@@ -2,21 +2,25 @@
 
 
 function VehiclesListController($scope, vehicleListProvider){
+
   var vm = this;
+  vm.title= "this is the list of vehicles";
 
-  vm.listVehicles = function(){
-    var ownerGuid = "617a69c3-bd34-445c-a762-1bbcf228f7bb"
+function get_vehicles(){
 
-      var vehicleListData = JSON.stringify({
-        'submitter': "submitter",
-        'ownerGuid': ownerGuid,
-        'activity': 'getbyowner'
-      })
+  $scope.vehicles =   vehicleListProvider.getVehicleByOwnerID( function(err, vehicles){
+        $scope.finished_loading = true;
+        if (err) {
+            $scope.page_load_error = err.message;
+        } else {
+              console.log("DEBUG => data --> " + vehicles);
+            $scope.vehicles = vehicles;
+        }
+      });
+    }
 
+get_vehicles();
 
-  vehicleListProvider.getVehicleByOwnerID(vehicleListData);
-
-      }
 }
   naBaseApp.controller("VehiclesListController", ['$scope', 'vehicleListProvider', VehiclesListController]);
 
